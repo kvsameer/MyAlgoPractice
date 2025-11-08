@@ -5,7 +5,7 @@ This repository contains my ongoing algorithm and data structure practice — wr
 ### 📘 Patterns Covered
 - Two Pointers
 - Sliding Window
-- Recursion (Tower of Hanoi, Reverse Linked List)
+- Recursion (Tower of Hanoi)
 - Dynamic Programming (in progress)
 - Greedy and Graph algorithms (coming soon)
 
