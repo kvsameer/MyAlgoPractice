@@ -1,0 +1,19 @@
+# My Algorithm Practice 🧠
+
+This repository contains my ongoing algorithm and data structure practice — written in Java — with a focus on **clarity, invariants, and architectural reasoning** rather than brute force.
+
+### 📘 Patterns Covered
+- Two Pointers (coming soon)
+- Sliding Window (coming soon)
+- Recursion (Tower of Hanoi)
+- Dynamic Programming (coming soon)
+- Greedy and Graph algorithms (coming soon)
+
+### 🧩 Example
+**Tower of Hanoi (Recursion + Immutable Modeling)**  
+Shows how recursive calls can be designed cleanly using Java records for state modeling.
+
+### 🛠 How to Run
+```bash
+javac src/Main.java
+java Main
