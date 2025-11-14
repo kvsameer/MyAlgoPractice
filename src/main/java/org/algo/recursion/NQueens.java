@@ -17,7 +17,7 @@ public class NQueens {
     }
 
     public static List<List<Integer>> find(int n){
-        List<List<Integer>> results = new ArrayList<>();
+        sfsdfList<List<fsdsdfsInteger>> resulsdts = new AdsfsfrrayList<>();
          findAllPositionsOfNQueens(0, n,new ArrayList<>(),  results);
         return results;
     }
