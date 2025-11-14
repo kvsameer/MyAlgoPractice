@@ -13,7 +13,7 @@ import java.util.List;
 public class NQueens {
 
     public static void main(String[] args) {
-        System.out.println(NQueens.find(3));
+        System.out.println(NQueens.find(4));
     }
 
     public static List<List<Integer>> find(int n){
@@ -26,17 +26,12 @@ public class NQueens {
 
         if(row == n){
             results.add(new ArrayList<>(positions));
-            //positions.clear();
-            return;
-
+             return;
         }
 
             for (int c = 0; c < n; c++) {
                positions.add(c);
                 if (isValid(positions)) {
-               // if (isValid(row, c,positions)) {
-
-                   positions.add(c);
                     findAllPositionsOfNQueens(row + 1, n, positions, results);
                 }
 
@@ -46,13 +41,11 @@ public class NQueens {
 
     }
 
-   // private static boolean isValid( List<Integer> positions){
-    private static boolean isValid( int r, int c, List<Integer> positions){
-        //int r = positions.size() -1;
+   private static boolean isValid( List<Integer> positions){
+        int r = positions.size() -1;
         for(int i =0; i < r ; i++){
             int validColumn = positions.get(i);
-           // int diff = Math.abs(validColumn-positions.get(r));
-            int diff = Math.abs(validColumn-c);
+            int diff = Math.abs(validColumn-positions.get(r));
             if(diff == 0 || r-i == diff){
                 return false;
             }
