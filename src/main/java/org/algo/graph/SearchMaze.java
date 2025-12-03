@@ -9,10 +9,18 @@ import java.util.Objects;
 public class SearchMaze {
 
     static List<List<Color>> maze = Arrays.asList(
-            new ArrayList<>(Arrays.asList(Color.WHITE, Color.WHITE, Color.WHITE)),
-            new ArrayList<>(Arrays.asList(Color.WHITE, Color.BLACK, Color.WHITE)),
-            new ArrayList<>(Arrays.asList(Color.WHITE, Color.WHITE, Color.WHITE))
+           Arrays.asList(Color.WHITE, Color.WHITE, Color.WHITE),
+            Arrays.asList(Color.WHITE, Color.BLACK, Color.WHITE),
+            Arrays.asList(Color.WHITE, Color.WHITE, Color.WHITE)
     );
+
+    //not used
+    static Color[][] maze2 = {
+            {Color.WHITE, Color.WHITE, Color.WHITE},
+            {Color.WHITE, Color.WHITE, Color.WHITE},
+            {Color.WHITE, Color.WHITE, Color.WHITE}
+                   };
+
     public static void main(String[] args) {
         System.out.println(SearchMaze.searchMaze(maze, new Coordinate(0,0), new Coordinate(2,2) ));
     }
