@@ -8,26 +8,25 @@ import java.util.List;
 public class Permutations {
 
     public static void main(String[] args) {
-        System.out.println(Permutations.permutations(Arrays.asList(2,3,5)));
+        System.out.println(Permutations.permutations(Arrays.asList(1,2,3)));
     }
 
     public static List<List<Integer>> permutations(List<Integer> ints){
-        List<List<Integer>> results = new ArrayList<>();
-        permutations(0, ints, results);
-        return results;
+        List<List<Integer>>  result = new ArrayList<>();
+        permutations(ints,0, result);
+        return result;
     }
 
-    public static void permutations(int i, List<Integer> ints,  List<List<Integer>> results){
-
-        if(i == ints.size() -1){
-            results.add(new ArrayList<>(ints));
+    public static void permutations(List<Integer> ints, int pos, List<List<Integer>> result){
+        if(pos == ints.size()){
+            result.add(new ArrayList<>(ints));
+            return;
         }
-        else{
-            for(int j = i; j < ints.size() ; j++){
-                Collections.swap(ints, i , j);
-                permutations(i+1, ints, results);
-                Collections.swap(ints, i , j);
-            }
+
+        for(int i=pos; i < ints.size() ; i++){
+            Collections.swap(ints, pos,i);
+            permutations(ints,pos+1, result);
+            Collections.swap(ints,pos,i);
         }
     }
 }
